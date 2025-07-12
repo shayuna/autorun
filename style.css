@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    overflow: hidden;
+}
+
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page.active {
+    display: flex;
+}
+
+/* Home Page Styles */
+.title-container {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.game-title {
+    font-size: 8rem;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    animation: flash 1.5s infinite;
+    text-shadow: 
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff,
+        0 0 30px #ff00ff,
+        0 0 40px #ff00ff;
+}
+
+@keyframes flash {
+    0%, 50% {
+        color: #ff00ff;
+        text-shadow: 
+            0 0 10px #ff00ff,
+            0 0 20px #ff00ff,
+            0 0 30px #ff00ff,
+            0 0 40px #ff00ff;
+    }
+    25%, 75% {
+        color: #00ffff;
+        text-shadow: 
+            0 0 10px #00ffff,
+            0 0 20px #00ffff,
+            0 0 30px #00ffff,
+            0 0 40px #00ffff;
+    }
+    100% {
+        color: #ffff00;
+        text-shadow: 
+            0 0 10px #ffff00,
+            0 0 20px #ffff00,
+            0 0 30px #ffff00,
+            0 0 40px #ffff00;
+    }
+}
+
+.start-button-container {
+    text-align: center;
+}
+
+.start-button {
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #ff1493; /* Deep pink - shocking color! */
+    text-shadow: 
+        2px 2px 0px #ff0000,
+        4px 4px 0px #ff4500,
+        6px 6px 0px #ff8c00;
+    animation: pulse 2s infinite;
+}
+
+.start-button:hover {
+    color: #ff69b4;
+    text-shadow: 
+        2px 2px 0px #ff0000,
+        4px 4px 0px #ff4500,
+        6px 6px 0px #ff8c00,
+        8px 8px 0px #ff1493;
+    transform: scale(1.1);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Game Page Styles */
+#gamePage {
+    background-color: #87CEEB;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.score, .lives {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#gameCanvas {
+    border: 3px solid #333;
+    background-color: #228B22;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Game Over Page Styles */
+.game-over-container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.game-over-title {
+    font-size: 4rem;
+    color: #ff0000;
+    margin-bottom: 30px;
+    text-shadow: 
+        0 0 10px #ff0000,
+        0 0 20px #ff0000,
+        0 0 30px #ff0000;
+    animation: gameOverFlash 1s infinite;
+}
+
+@keyframes gameOverFlash {
+    0%, 50% {
+        color: #ff0000;
+        text-shadow: 
+            0 0 10px #ff0000,
+            0 0 20px #ff0000,
+            0 0 30px #ff0000;
+    }
+    25%, 75% {
+        color: #ffffff;
+        text-shadow: 
+            0 0 10px #ffffff,
+            0 0 20px #ffffff,
+            0 0 30px #ffffff;
+    }
+}
+
+.final-score {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+} 

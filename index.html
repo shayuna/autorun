@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTORUN - The Ultimate Car Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Home Page -->
+    <div id="homePage" class="page active">
+        <div class="title-container">
+            <h1 class="game-title">AUTORUN</h1>
+        </div>
+        <div class="start-button-container">
+            <button id="startButton" class="start-button">START GAME</button>
+        </div>
+    </div>
+
+    <!-- Game Page -->
+    <div id="gamePage" class="page">
+        <div class="game-header">
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="lives">Lives: <span id="lives">3</span></div>
+        </div>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+    </div>
+
+    <!-- Game Over Page -->
+    <div id="gameOverPage" class="page">
+        <div class="game-over-container">
+            <h2 class="game-over-title">END GAME</h2>
+            <div class="final-score">Final Score: <span id="finalScore">0</span></div>
+            <button id="restartButton" class="start-button">START GAME</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
